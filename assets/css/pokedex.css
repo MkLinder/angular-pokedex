@@ -1,7 +1,7 @@
 /*---------- General settings ------------------*/
 .pokemons {
-    display: grid; /*Aqui transforma a lista em tabela*/
-    grid-template-columns: 1fr; /*Aqui divide em colunas com um elemento em cada. Cada '1fr' significa uma coluna.*/
+    display: grid; 
+    grid-template-columns: 1fr;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -65,8 +65,8 @@
 
 /*------------------------------------------------------------------------------------*/
 .pokemon {
-    display: flex; /*Aqui organiza os elementos um do lado do outro ou um em baixo do outro (com 'flex-direction')*/
-    flex-direction: column; /*'column' define um abaixo do outro e 'row' um ao lado do outro*/
+    display: flex; 
+    flex-direction: column; 
     position: relative;
     height: 12rem;
     margin: 0 0.5rem 1rem;
@@ -95,7 +95,7 @@
 .pokemon .name {
     color: #fff;
     margin: 0 10px;
-    text-transform: capitalize; /* Faz com que a primeira letra seja maiúscula e restante minúscula*/
+    text-transform: capitalize; 
 }
 
 .pokemon .detail {
@@ -121,14 +121,13 @@
     font-size: .625rem;
     border-radius: 1rem;
     text-align: center;
-    filter: brightness(1.1); /* 'filter: brightness' altera o brilho do elemento*/
+    filter: brightness(1.1); 
     box-shadow: 0 0 1px #ffffffd3;
 }
 
 .pokemon .detail img {
     max-width: 100%;
     height: 70px;
-    /* align-self: flex-end; aqui alinha as imagens à direita. Obs: esta é uma propriedade do 'display: flex' */
 }
 
 .pokemon button {

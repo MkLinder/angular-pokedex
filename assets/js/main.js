@@ -28,9 +28,6 @@ function loadPokemonItems(offset, limit) {
             });
 
             const maxLength = Math.max(modifiedStats.length, pokemon.stats_values.length, stats.length);
-            //A função Math.max é usada para obter o valor máximo entre os comprimentos das três listas. 
-            //Isso garante que você percorra todas as listas e crie elementos para cada posição, mesmo que 
-            //uma das listas seja mais curta do que as outras.
 
             const combinedList = [];
 
@@ -77,19 +74,8 @@ function loadPokemonItems(offset, limit) {
             </li>   
         `}).join('');
         pokemonList.innerHTML += newHtml; 
-
-        // Seria a mesma coisa que isto: pokemons.map((pokemon) => convertPokemonToHtml(pokemon))
-        // Explicando a linha 24: "Pega a lista de pokemons, mapeia (map) e converte esta lista de pokemons, para uma lista de 
-        //'<li></li>' (html)". Depois junta todos esses '<li></li>' sem separador nenhum (join). Pega tudo isso e concatena com 
-        //o HTML antigo (pokemonList.innerHTML).
     });   
-    // const moreInfoButton = document.getElementsByClassName('moreInfo');
-    // console.log(moreInfoButton);
-    // for (let i = 0; i < moreInfoButton.length; i++) {
-    //     moreInfoButton[i].addEventListener("click", function() {
-    //         moreInfoButton.style.backgroundColor = "#e74c3c";
-    //     })  
-    // };  
+
 }
 
 loadPokemonItems(offset, limit);
@@ -107,21 +93,3 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItems(offset, limit);
     }
 });
-
-
-// const moreInfoPokemon = document.getElementsByClassName('pokemon');
-// console.log(moreInfoPokemon);
-// for (let i = 0; i < moreInfoButton.length; i++) {
-//     moreInfoButton[i].addEventListener("click", function() {
-//       // Lógica a ser executada quando um botão é clicado
-      
-//     });
-//     console.log(moreInfoButton[i]);
-//   }
-
-// moreInfoButton.addEventListener('click', () => {
-//     moreInfoButton.style.backgroundColor = "#e74c3c";
-// })
-
-
-  
