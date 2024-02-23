@@ -1,0 +1,31 @@
+header {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pokeball {
+  border: 1px solid green;
+}
+
+.logo {
+  border: 1px solid blue;
+}
+
+.container {
+  width: 60vw;
+  padding: 5px;
+
+  border-radius: 10px;
+  background-color: #0E1531;
+}
+
+pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  align-content: center;
+}
