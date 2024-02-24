@@ -4,13 +4,13 @@ import { Injectable } from '@angular/core';
 import { Observable, observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-// import { Pokemon } from '../models/pokemon';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokemonService {
-  private url = environment.pokemonsListUrl
+  public limit = 20;
+  private url = environment.pokemonsListUrl + this.limit
   // pokemonsList = [];
 
 

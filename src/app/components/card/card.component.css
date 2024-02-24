@@ -1,31 +1,64 @@
 header {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
+  align-items: center;
+
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .pokeball {
-  border: 1px solid green;
+  width: 40px;
+  height: 40px;
 }
 
 .logo {
-  border: 1px solid blue;
+  width: 200px;
 }
 
 .container {
   width: 60vw;
   padding: 5px;
+  margin-bottom: 20px;
 
   border-radius: 10px;
-  background-color: #0E1531;
+  background-color: #0e1531d7;
+  box-shadow: 0px 0px 10px 1px #000000c9;
 }
 
 pokemon-list {
+  padding: 10px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
   align-content: center;
+}
+
+.container__more {
+  height: 40px;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.more {
+  height: 80%;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: #77C850;
+  font-weight: 700;
+  box-shadow: 0px 0px 10px 2px #000000c2;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+
+.more:hover {
+
+  height: 90%;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: white;
+  box-shadow: 0px 0px 10px 2px #f1f1f152;
 }

@@ -18,4 +18,8 @@ body {
 
   background-image: url('./img/Pokemon-Wallpaper.jpg');
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-y: 20%;
+  background-position-x: 4%;
 }
+

@@ -71,6 +71,10 @@
   margin-bottom: 15px;
 
   background-color: white;
+  background-image: url("../../../img/back-detail4.png ");
+  background-repeat: no-repeat;
+  background-size: 150px;
+  background-position: right center;
   border-radius: 20px;
   cursor: pointer;
 }
