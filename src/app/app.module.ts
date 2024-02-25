@@ -2,23 +2,26 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+//Components
 import { AppComponent } from './app.component';
-import { CardComponent } from './components/card/card.component';
-import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+
+//Modules
+import { AppRoutingModule } from './app-routing.module';
+import { ComponentsModule } from "./components/components.module";
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CardComponent,
-    PokemonListComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ComponentsModule,
+        PagesModule
+    ]
 })
 export class AppModule { }

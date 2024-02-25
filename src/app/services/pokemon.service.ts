@@ -9,32 +9,35 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PokemonService {
-  public limit = 20;
-  private url = environment.pokemonsListUrl + this.limit
-  // pokemonsList = [];
+  private limit = 10;
+  private offset = 0;
+  private url = `${environment.pokemonsListUrl}?offset=${this.offset}&limit=${this.limit}`;
 
 
   constructor(private http:HttpClient) {
-    // this.getPokemonsList()
   }
-  // getPokemonsList() {
-  //   return this.http.get<Pokemon[]>(this.url)
-  // }
 
   get pokeApiList():Observable<any>{
     return this.http.get<any>(this.url).pipe(  // 'pipe()' funciona como um filtro, retornando somente o que queremos.
       tap(res => res),
       tap(res => {
         res.results.map((resPokemons:any) => {
-          this.apiGetPokemons(resPokemons.url).subscribe(
+          this.getPokemonsDetails(resPokemons.url).subscribe(
             res => resPokemons.status = res
+          )
+        })
+      }),
+      tap(res => {
+        res.results.map((resPokemons:any) => {
+          this.getPokemonsDetails(resPokemons.url).subscribe(
+            res => resPokemons.id = res.id.toString().padStart(3, '0')
           )
         })
       })
     )
   }
 
-  public apiGetPokemons( url:string):Observable<any>{ // Esta função foi criada pois iremos utilizar
+  public getPokemonsDetails( url:string):Observable<any>{ // Esta função foi criada pois iremos utilizar
     return this.http.get<any>(url).pipe(             // este trecho de código para outras funciolidades.
       tap(res => res)
     )

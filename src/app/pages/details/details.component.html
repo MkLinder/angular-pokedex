@@ -1,0 +1,36 @@
+<app-header></app-header>
+<main>
+  <section class="pokemon__name">
+    <h1>{{ pokemon[0].name }}</h1>
+    <h2>{{ pokemon[1].names[0].name }}</h2>
+  </section>
+  <section class="pokemon__status">
+    <img class="pokemon__image"
+    [src]="pokemon[0].sprites.other.dream_world.front_default"
+    [alt]="pokemon[0].name"
+    >
+
+    <article class="status__statics">
+      <section>
+        <h3>Statistics</h3>
+
+        <ol>
+          <li *ngFor="let value of pokemon[0].stats">
+            {{ value.stat.name }}
+
+            <strong>
+              {{ value.base_stat }}
+            </strong>
+          </li>
+        </ol>
+
+      </section>
+
+      <a [routerLink]="['']" class="btn__secondary">
+        voltar
+      </a>
+    </article>
+  </section>
+</main>
+
+<app-footer></app-footer>

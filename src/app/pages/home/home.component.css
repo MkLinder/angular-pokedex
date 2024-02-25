@@ -1,25 +1,6 @@
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.pokeball {
-  width: 40px;
-  height: 40px;
-}
-
-.logo {
-  width: 200px;
-}
-
 .container {
   width: 60vw;
   padding: 5px;
-  margin-bottom: 20px;
 
   border-radius: 10px;
   background-color: #0e1531d7;
