@@ -1,8 +1,8 @@
 <app-header></app-header>
 <main>
   <section class="pokemon__name">
-    <h1>{{ pokemon[0].name }}</h1>
     <h2>{{ pokemon[1].names[0].name }}</h2>
+    <h1>{{ pokemon[0].name }}</h1>
   </section>
   <section class="pokemon__status">
     <img class="pokemon__image"
@@ -10,25 +10,32 @@
     [alt]="pokemon[0].name"
     >
 
-    <article class="status__statics">
-      <section>
+    <article class="status__statistics">
+      <section class="statistics__container">
         <h3>Statistics</h3>
 
-        <ol>
+        <ol class="status__list">
           <li *ngFor="let value of pokemon[0].stats">
-            {{ value.stat.name }}
-
-            <strong>
-              {{ value.base_stat }}
-            </strong>
+            <span class="status__stat">
+              {{ value.stat.name }}
+            </span>
+            <span class="status__bar"></span>
+            <span class="status__stat-value">
+              <strong>
+                {{ value.base_stat }}
+              </strong>
+            </span>
           </li>
         </ol>
 
       </section>
 
-      <a [routerLink]="['']" class="btn__secondary">
-        voltar
-      </a>
+      <div class="button">
+        <!-- <a [routerLink]="['']" class="btn__secondary">
+          voltar
+        </a> -->
+        <app-button [routerLink]="['']" [value]="buttonValue"></app-button>
+      </div>
     </article>
   </section>
 </main>
