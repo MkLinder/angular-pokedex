@@ -1,14 +1,20 @@
 <app-header></app-header>
 <main>
-  <section class="pokemon__name">
-    <h2>{{ pokemon[1].names[0].name }}</h2>
-    <h1>{{ pokemon[0].name }}</h1>
-  </section>
+
   <section class="pokemon__status">
-    <img class="pokemon__image"
-    [src]="pokemon[0].sprites.other.dream_world.front_default"
-    [alt]="pokemon[0].name"
-    >
+    <div class="image__name">
+      <section>
+        <img id="pokemon-image"
+      [src]="pokemon[0].sprites.other.dream_world.front_default"
+      [alt]="pokemon[0].name"
+      >
+      </section>
+
+      <section class="pokemon__name">
+        <h2>{{ pokemon[1].names[0].name }}</h2>
+        <h1>{{ pokemon[0].name }}</h1>
+      </section>
+    </div>
 
     <article class="status__statistics">
       <section class="statistics__container">
@@ -19,7 +25,16 @@
             <span class="status__stat">
               {{ value.stat.name }}
             </span>
-            <span class="status__bar"></span>
+            <span class="status__bar">
+              <span class="color__bar"
+                *ngIf="value.base_stat < 50"
+                [style.width]="value.base_stat + '%'"
+                style="background-color: red;"></span>
+              <span class="color__bar"
+                *ngIf="value.base_stat >= 50"
+                [style.width]="value.base_stat + '%'"
+                style="background-color: green;"></span>
+            </span>
             <span class="status__stat-value">
               <strong>
                 {{ value.base_stat }}
@@ -31,9 +46,6 @@
       </section>
 
       <div class="button">
-        <!-- <a [routerLink]="['']" class="btn__secondary">
-          voltar
-        </a> -->
         <app-button [routerLink]="['']" [value]="buttonValue"></app-button>
       </div>
     </article>

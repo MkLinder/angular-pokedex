@@ -15,6 +15,7 @@ export class PokemonListComponent implements OnInit {
     this.pokemonService.pokeApiList.subscribe(
       res => {
         this.pokemons = res.results
+        console.log(this.pokemons)
       }
     )
   }

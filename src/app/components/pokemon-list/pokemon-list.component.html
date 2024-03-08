@@ -14,14 +14,16 @@
             {{ pokemon.name }}
           </h2>
 
-          <ul class="section__status" *ngFor="let types of pokemon.status.types">
-            <li class="status__type {{ types.type.name }}">
-      <!-- (pokemon?.status?.types)'?' Serve para verificar se aquela propriedade existe antes,
-      para que não retorne 'undefined' e consequentemente gere erro. Mas neste caso teríamos que
-      utilizar muitas '?', então este método foi substituído por um '*ngIf' na tag '<a>' -->
-              {{ types.type.name }}
-            </li>
-          </ul>
+          <div class="content__status">
+            <ul class="status" *ngFor="let types of pokemon.status.types">
+              <li class="status__type {{ types.type.name }}">
+        <!-- (pokemon?.status?.types)'?' Serve para verificar se aquela propriedade existe antes,
+        para que não retorne 'undefined' e consequentemente gere erro. Mas neste caso teríamos que
+        utilizar muitas '?', então este método foi substituído por um '*ngIf' na tag '<a>' -->
+                {{ types.type.name }}
+              </li>
+            </ul>
+          </div>
         </section>
         <section class="card__img">
           <img [src]="pokemon.status.sprites.other.dream_world.front_default" [alt]="pokemon.name">

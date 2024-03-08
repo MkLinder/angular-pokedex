@@ -73,7 +73,7 @@
   background-color: rgba(255, 255, 255, 0.959);
   background-image: url("../../../img/back-detail6.png ");
   background-repeat: no-repeat;
-  background-size: 150px;
+  background-size: 40%;
   background-position: right center;
   background-position-x: 97%;
   background-position-y: 60%;
@@ -167,6 +167,66 @@
 }
 
 .card__img > img {
-  width: 100%;
+  width: 90%;
   max-height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .container__card {
+    background-size: 44%;
+  }
+}
+
+@media screen and (max-width: 738px) {
+  .container__card {
+    background-size: 52%;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .container__card {
+    width: 90%;
+    background-size: 41%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container__card {
+    width: 90%;
+    background-size: 45%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .container__card {
+    background-size: 56%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .container__card {
+    background-size: 53%;
+    background-position-x: 50%;
+    background-position-y: 95%;
+    height: 230px;
+  }
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .card__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content__section {
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  .content__status {
+    display: flex;
+    flex-direction: row;
+  }
 }
