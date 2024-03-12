@@ -9,9 +9,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PokemonService {
-  private limit = 10;
-  private offset = 0;
-  private url = `${environment.pokemonsListUrl}?offset=${this.offset}&limit=${this.limit}`;
+  private limit = 151;
+  private url = `${environment.pokemonsListUrl}?limit=${this.limit}`;
 
 
   constructor(private http:HttpClient) {

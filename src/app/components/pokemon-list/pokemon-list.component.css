@@ -148,11 +148,12 @@
 }
 
 .status__type {
-  width: max-content;
+  width: 40%;
   padding: 6px 10px;
   margin-bottom: 4px;
 
   list-style: none;
+  text-align: center;
   font-size: 10px;
   font-weight: 400;
   color: white;

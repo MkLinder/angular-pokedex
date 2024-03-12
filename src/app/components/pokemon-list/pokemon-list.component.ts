@@ -8,6 +8,7 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 })
 export class PokemonListComponent implements OnInit {
   public pokemons: any;
+  public limit:number = 11;
 
   constructor(private pokemonService:PokemonService){
   }
@@ -15,7 +16,6 @@ export class PokemonListComponent implements OnInit {
     this.pokemonService.pokeApiList.subscribe(
       res => {
         this.pokemons = res.results
-        console.log(this.pokemons)
       }
     )
   }

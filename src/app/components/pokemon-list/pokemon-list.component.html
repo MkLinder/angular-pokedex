@@ -1,6 +1,6 @@
 <ng-template ngFor let-pokemon [ngForOf]="pokemons">
 
-  <div class="container__card">
+  <div *ngIf="pokemon.status.id < limit" class="container__card">
 
     <div class="card" *ngIf="pokemon.status">
 
@@ -19,7 +19,7 @@
               <li class="status__type {{ types.type.name }}">
         <!-- (pokemon?.status?.types)'?' Serve para verificar se aquela propriedade existe antes,
         para que não retorne 'undefined' e consequentemente gere erro. Mas neste caso teríamos que
-        utilizar muitas '?', então este método foi substituído por um '*ngIf' na tag '<a>' -->
+        utilizar muitas '?', então este método foi substituído por um '*ngIf' na tag '<div.card>' -->
                 {{ types.type.name }}
               </li>
             </ul>
