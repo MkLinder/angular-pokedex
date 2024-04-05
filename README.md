@@ -4,6 +4,11 @@
 Este projeto foi desenvolvido inicialmente junto à DIO (Digital Inovation One), com conhecimentos adquiridos no curso da DIO e também por outros meios. <br>
 Implementei o projeto com o framework Angular e modifiquei o design geral, trazendo um pouco mais da minha personalidade.
 
+#
+Para desenvolver este projeto foram usadas as tecnologias: 
+<br>
+<br>
+[![My Skills](https://skillicons.dev/icons?i=html,css,nodejs,typescript,angular)](https://skillicons.dev)   
 
 ## Página home:
   Lista da primeira geração de pokemons. Para ver os detalhes do pokemon, basta clicar em cima do card do pokemon desejado.
